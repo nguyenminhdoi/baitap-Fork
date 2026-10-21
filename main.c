@@ -41,7 +41,18 @@ void xuatDanhSach(SinhVien ds[], int n) {
     }
 }
 // Ham tim va tra ve sinh vien co diem trung binh cao nhat
-SinhVien timMaxDiemTB(SinhVien ds[], int n);
+SinhVien timMaxDiemTB(SinhVien ds[], int n){
+   int max = 0;
+
+    for (int i = 1; i < n; i++) {
+        if (ds[i].diemTB > ds[max].diemTB) {
+            max = i;
+        }
+    }
+
+    return ds[max];
+}
+
 
 // 5. Ham main goi cac ham tren de thuc thi chuong trinh
 int main()
